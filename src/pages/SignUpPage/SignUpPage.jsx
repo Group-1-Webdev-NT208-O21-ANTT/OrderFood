@@ -5,7 +5,12 @@ import { WrapperContainerLeft, WrapperContainerRight, WrapperTextLight } from '.
 import imageLogo from '../../assets/images/logo-login.png'
 import { Image } from 'antd'
 import { useNavigate } from 'react-router'
+import { useState } from 'react';
+import { EyeInvisibleOutlined, EyeOutlined, EyeFilled, EyeInvisibleFilled } from '@ant-design/icons';
+
 const SignUpPage = () => {
+  const [isShowPassword, setIsShowPassword] = useState(false);
+const [isShowConfirmPassword, setIsShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
 	const handleNavigateSignIn = () => {
 		navigate('/sign-in')
@@ -16,9 +21,40 @@ const SignUpPage = () => {
         <WrapperContainerLeft>
           <h1>Xin chào</h1>
           <p>Đăng kí tài khoản mới!</p>
-          <InputForm placeholder="Nhập email" />
+          <InputForm style={{ marginBottom: '10px' }} placeholder="abc@gmail.com" />
+            <div style={{ position: 'relative' }}>
+              <span onClick={() => setIsShowPassword(!isShowConfirmPassword)}
+                    style={{
+                      zIndex: 10,
+                      position: 'absolute',
+                      top: '4px',
+                      right: '8px'
+                    }}>
+                {isShowPassword ? (
+                  <EyeFilled />
+                ) : (
+                  <EyeInvisibleFilled />
+                )}
+                </span>
+        <InputForm placeholder ="password" style = {{ marginBottom:'10px' }} />
+              </div>
 
-          <InputForm placeholder="Nhập mật khẩu" />
+              <div style={{ position: 'relative' }}>
+                  <span style={{
+                    zIndex: 10,
+                    position: 'absolute',
+                    top: '4px',
+                    right: '8px'
+                  }}>
+                    {isShowConfirmPassword ? (
+                      <EyeFilled />
+                    ) : (
+                      <EyeInvisibleFilled />
+                    )}
+                    </span>
+              
+                  <InputForm placeholder="confirm password" />
+                </div>
             <ButtonComponent
               size={40}
               styleButton={{
