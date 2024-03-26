@@ -6,8 +6,14 @@ import imageLogo from '../../assets/images/logo-login.png'
 import { Image } from 'antd'
 import { useState, useDispatch } from 'react';
 import { EyeFilled, EyeInvisibleFilled } from '@ant-design/icons'
+import { useNavigate } from 'react-router-dom';
 
 const SignInPage = () => {
+  const navigate = useNavigate();
+	const handleNavigateSignUp = () => {
+		navigate('/sign-up')
+	}
+  
     return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.53)', height: '100vh' }}>
       <div style={{ width: '800px', height: '445px', borderRadius: '6px', background: '#fff', display: 'flex' }}>
@@ -30,7 +36,7 @@ const SignInPage = () => {
             }}
           ></ButtonComponent>
           <p><WrapperTextLight>Quên mật khẩu?</WrapperTextLight></p>
-          <p><WrapperTextLight>Chưa có tài khoản?</WrapperTextLight></p>
+          <p><WrapperTextLight onClick={handleNavigateSignUp}>Chưa có tài khoản?</WrapperTextLight></p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
           <Image src={imageLogo} preview={false} alt="imamge-logo" height="203px" width="203px" />

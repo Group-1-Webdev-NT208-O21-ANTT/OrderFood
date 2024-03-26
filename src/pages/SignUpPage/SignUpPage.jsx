@@ -4,7 +4,12 @@ import InputForm from '../../components/InputForm/InputForm'
 import { WrapperContainerLeft, WrapperContainerRight, WrapperTextLight } from './style'
 import imageLogo from '../../assets/images/logo-login.png'
 import { Image } from 'antd'
+import { useNavigate } from 'react-router'
 const SignUpPage = () => {
+  const navigate = useNavigate();
+	const handleNavigateSignIn = () => {
+		navigate('/sign-in')
+	}
   return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.53)', height: '100vh' }}>
       <div style={{ width: '800px', height: '445px', borderRadius: '6px', background: '#fff', display: 'flex' }}>
@@ -27,7 +32,7 @@ const SignUpPage = () => {
               textbutton={'Đăng ký'}
               styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
             ></ButtonComponent>
-          <p>Bạn đã có tài khoản? <WrapperTextLight> Đăng nhập</WrapperTextLight></p>
+          <p>Bạn đã có tài khoản? <WrapperTextLight onClick={handleNavigateSignIn}> Đăng nhập</WrapperTextLight></p>
         </WrapperContainerLeft>
         <WrapperContainerRight>
           <Image src={imageLogo} preview={false} alt="iamge-logo" height="203px" width="203px" />
