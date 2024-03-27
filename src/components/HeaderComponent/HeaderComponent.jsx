@@ -12,8 +12,14 @@ import {
   UserOutlined,
 } from "@ant-design/icons";
 import ButtonInputSearch from "../ButtonInputSearch/ButtonInputSearch";
+import { useNavigate } from 'react-router-dom';
+
 
 const HeaderComponent = () => {
+  const navigate = useNavigate();
+	const handleNavigateLogin = () => {
+		navigate('/sign-in')
+	}
   return (
     <div>
       <WrapperHeader>
@@ -31,7 +37,7 @@ const HeaderComponent = () => {
         <Col span={6} style={{ display: "flex", gap: "20px" }}>
           <WrapperHeaderAccount>
             <div>
-              <div>
+                <div onClick={handleNavigateLogin} style={{cursor: 'pointer' }}>
                 <UserAddOutlined style={{ fontSize: "20px" }} />
                 <WrapperTextHeader2>Đăng nhập/Đăng ký</WrapperTextHeader2>
                 <div>
