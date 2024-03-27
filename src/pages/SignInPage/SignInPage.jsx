@@ -10,9 +10,23 @@ import { useNavigate } from 'react-router-dom';
 
 const SignInPage = () => {
   const navigate = useNavigate();
+
+  const [email,setEmail] = useState('');
+  const [password, setPassword] = useState('');
 	const handleNavigateSignUp = () => {
 		navigate('/sign-up')
 	}
+  const handleOnChangeEmail = (value) => {
+    setEmail(value)
+  }
+  
+  const handleOnChangePassword = (value) => {
+    setPassword(value)
+  }
+
+  const handleSignIn=() => {
+      console.log('sign-in', email, password)
+   }
   const [isShowPassword, setIsShowPassword] = useState(false)
     return (
     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'rgba(0, 0, 0, 0.53)', height: '100vh' }}>
@@ -20,9 +34,12 @@ const SignInPage = () => {
         <WrapperContainerLeft>
           <h1>Xin chào</h1>
           <p>Đăng nhập vào tạo tài khoản</p>
-          <InputForm style={{ marginBottom: '10px' }} placeholder="abc@gmail.com" />
+          <InputForm style={{ marginBottom: '10px' }} placeholder="abc@gmail.com" 
+          value = {email} handleOchange = { handleOnChangeEmail}
+          />
           <div style={{ position: 'relative' }}>
             <span
+            onClick={() => setIsShowPassword = (!isShowPassword)}
               style={{
                 zIndex: 10,
                 position: 'absolute',
@@ -36,9 +53,14 @@ const SignInPage = () => {
                 <EyeInvisibleFilled />
               )}
             </span>
-            <InputForm placeholder="password" type={isShowPassword ? "text" : "password"} />
+            <InputForm placeholder="password" type={isShowPassword ? "text" : "password"} 
+            
+              value = {password} handleOchange = { handleOnChangePassword}
+            />
           </div>
           <ButtonComponent
+          disabled={email.length || !password.length}
+          onClick={handleSignIn}
            bordered={false}
            size={40}
            styleButton={{
@@ -49,7 +71,7 @@ const SignInPage = () => {
              borderRadius: '4px',
              margin: '26px 0 10px'
            }}
-           textButton={'Đang nhập'}
+           textbutton={'Đăng nhập'}
            styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
          
           ></ButtonComponent>
