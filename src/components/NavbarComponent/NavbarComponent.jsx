@@ -53,6 +53,7 @@ const NavbarComponent = () => {
   };
   return (
     <div >
+      
       <WrapperLableText>Lable</WrapperLableText>
       <WrapperContent>
         {renderContent("text", ["Do an nhanh", "Com Tam", "Pho"])}
