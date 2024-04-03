@@ -23,7 +23,8 @@ const HomePage = () => {
       <div
         id="container"
         style={{
-          backgroundColor: "#efefef",
+          backgroundColor: "yellow",
+          // backgroundImage:'url("../../assets/images/background3.jpg")',
           padding: "0 120px",
           height: "1000px",
           width: "100%",

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import background3 from "../../assets/images/background3.jpg"
 export const WrapperLableText = styled.h4`
     color: rgb(56, 56, 61);
     font-size: 14px;
@@ -10,6 +10,7 @@ export const WrapperTextValue = styled.span`
     color: rgb(56, 56, 61);
     font-size: 12px;
     font-weight: 400;
+    background-image: url(${background3});
 `
 
 export const WrapperContent = styled.div`
