@@ -1,0 +1,193 @@
+biết về column-span : all, none
+column-gap, column-count
+
+Ghi nhớ : đọc code, có những hàm lạ thì xem library import vào. Nhiều khi tra google không ra như {col} của antd
+
+
+
+
+package lab2;
+import java.awt.*;
+import java.awt.event.*;
+
+public class Bai1 extends Frame implements ActionListener {
+    private TextField display;
+    private double memory = 0;
+    private double currentNumber = 0;
+    private String currentOperation = "";
+    private boolean startNewNumber = true;
+
+    public Bai1() {
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        // Display
+        display = new TextField("", 20);
+        display.setEditable(false);
+        gbc.gridwidth = GridBagConstraints.REMAINDER;
+        gbc.weightx = 1;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        add(display, gbc);
+
+
+
+        // Buttons
+        String[] buttonLabels = {
+			"MC", "MR", "MS", "M+", "M-", 
+            "Back", "CE", "C", "±", "√", 
+            "7", "8", "9", "/", "%", 
+            "4", "5", "6", "*", "1/x", 
+            "1", "2", "3", "-", 
+            "=", "0", ".", "+"
+        };
+
+        // Initialize button positions
+        int x = 0;
+        int y = 1; // Start from second row because of the display
+
+        // Add buttons to the frame
+        for (int i = 0; i < buttonLabels.length; i++) {
+            gbc = new GridBagConstraints();
+            gbc.gridx = x;
+            gbc.gridy = y;
+            gbc.fill = GridBagConstraints.BOTH;
+            gbc.weightx = 1;
+            gbc.weighty = 1;
+
+            // Normal buttons take up one cell
+            gbc.gridwidth = 1;
+            gbc.gridheight = 1;
+
+            // Special cases for "0" and "=" buttons
+            if (buttonLabels[i].equals("=")) {
+                gbc.gridx = 4; // Set "=" to the last column
+                gbc.gridy = y; // Set "=" to start at the current row
+                gbc.gridheight = 2;
+            } else if (buttonLabels[i].equals("0")) {
+                gbc.gridwidth = 2; // "0" spans two rows
+            } else if (buttonLabels[i].equals(".")) {
+                gbc.gridx = 2;
+                gbc.gridy = y;
+            } else if (buttonLabels[i].equals("+")) {
+                gbc.gridx = 3;
+                gbc.gridy = y;
+            }
+
+            Button button = new Button(buttonLabels[i]);
+            button.addActionListener(this); // Add ActionListener
+            add(button, gbc);
+
+            x++;
+            if (x > 4) {
+                x = 0; // Reset column to 0
+                y++; // Move to the next row
+            }
+
+            // Additional increment for the row after adding "=" button
+            if (buttonLabels[i].equals("=")) {
+                y++; // Skip next row for the bottom part of "="
+            }
+        }
+
+        setTitle("Calculator");
+        pack();
+        setVisible(true);
+        setLocationRelativeTo(null); // Center the window
+
+        addWindowListener(new WindowAdapter() {
+            public void windowClosing(WindowEvent we) {
+                System.exit(0);
+            }
+        });
+    }
+
+    public void actionPerformed(ActionEvent e) {
+        String command = e.getActionCommand();
+        if (command.matches("[0-9]") || command.equals(".")) {
+            if (startNewNumber) {
+                display.setText("");
+                startNewNumber = false;
+            }
+            display.setText(display.getText() + command);
+        } else {
+            switch (command) {
+                case "CE":
+                    display.setText("");
+                    startNewNumber = true;
+                    break;
+                case "C":
+                    currentNumber = 0;
+                    display.setText("");
+                    startNewNumber = true;
+                    break;
+                case "+/-":
+                    currentNumber = -Double.parseDouble(display.getText());
+                    display.setText(String.valueOf(currentNumber));
+                    break;
+                case "√":
+                    currentNumber = Math.sqrt(Double.parseDouble(display.getText()));
+                    display.setText(String.valueOf(currentNumber));
+                    startNewNumber = true;
+                    break;
+                case "MC":
+                    memory = 0;
+                    break;
+                case "MR":
+                    display.setText(String.valueOf(memory));
+                    startNewNumber = true;
+                    break;
+                case "MS":
+                    memory = Double.parseDouble(display.getText());
+                    break;
+                case "M+":
+                    memory += Double.parseDouble(display.getText());
+                    break;
+                case "M-":
+                    memory -= Double.parseDouble(display.getText());
+                    break;
+                case "+":
+                case "-":
+                case "*":
+                case "/":
+                    performOperation();
+                    currentOperation = command;
+                    startNewNumber = true;
+                    break;
+                case "=":
+                    performOperation();
+                    startNewNumber = true;
+                    break;
+            }
+        }
+    }
+
+    private void performOperation() {
+        double number = Double.parseDouble(display.getText());
+        switch (currentOperation) {
+            case "+":
+                currentNumber += number;
+                break;
+            case "-":
+                currentNumber -= number;
+                break;
+            case "*":
+                currentNumber *= number;
+                break;
+            case "/":
+                if (number != 0)
+                    currentNumber /= number;
+                else
+                    currentNumber = Double.NaN; // Handle division by zero
+                break;
+            default:
+                currentNumber = number;
+                break;
+        }
+        display.setText(String.valueOf(currentNumber));
+    }
+
+    public static void main(String[] args) {
+        new Bai1();
+    }
+}
+

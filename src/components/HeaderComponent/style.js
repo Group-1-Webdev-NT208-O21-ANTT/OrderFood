@@ -7,6 +7,13 @@ export const  WrapperHeader = styled(Row)`
      align-items: center;
      gap: 16px;
      flex-wrap: nowrap
+
+     @media only screen and (max-width: 600px) {
+          padding: 10px; // giảm padding trên các màn hình nhỏ
+          flex-wrap: wrap; // cho phép các items chuyển xuống hàng mới
+
+          
+        }
 `
      
 export const WrapperTextHeader = styled.span`
@@ -14,6 +21,12 @@ export const WrapperTextHeader = styled.span`
      color: #fff;
      font-weight: bold;
      text-align: left;
+
+     @media only screen and (max-width: 600px) {
+          font-size: 25px;
+          position: relative;
+          right:100px;
+        }
 `
 export const  WrapperHeaderAccount = styled.div`
     display:flex,

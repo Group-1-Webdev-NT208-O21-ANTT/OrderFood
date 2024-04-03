@@ -23,7 +23,7 @@ const ButtonInputSearch = (props) => {
       />
       <ButtonComponent
         size={size}
-        
+        // padding-left={100}
         styleButton={{
           background: backgroundColorButton,
           border: !bordered && "none",

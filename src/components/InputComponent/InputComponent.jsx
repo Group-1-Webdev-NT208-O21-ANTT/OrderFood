@@ -9,6 +9,7 @@ const InputComponent = ({ size, placeholder, bordered, style, ...rests }) => {
       bordered={bordered}
       style={style}
       {...rests}
+      // padding-right={30}
     />
   );
 };

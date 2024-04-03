@@ -26,7 +26,7 @@ const HeaderComponent = () => {
         <Col span={6}>
           <WrapperTextHeader>EaToLive</WrapperTextHeader>
         </Col>
-        <Col span={12}>
+        <Col span={16}>
           <ButtonInputSearch
             size="large"
             bordered={false}
