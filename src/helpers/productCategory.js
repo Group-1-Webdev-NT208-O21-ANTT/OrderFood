@@ -1,16 +1,16 @@
 const productCategory = [
-    { id : 1, label : "Airpodes", value : "airpodes"},
-    { id : 2, label : "Camera", value : "camera"},
-    { id : 3, label : "Earphones", value : "earphones"},
-    { id : 4, label : "Mobiles", value : "mobiles"},
-    { id : 5, label : "Mouse", value : "Mouse"},
-    { id : 6, label : "Printers", value : "printers"},
-    { id : 7, label : "Processor", value : "processor"},
-    { id : 8, label : "Refrigerator", value : "refrigerator"},
-    { id : 9, label : "Speakers", value : "speakers"},
-    { id : 10, label : "Trimmers", value : "trimmers"},
-    { id : 11, label : "Televisions", value : "televisions"},
-    { id : 12, label : "Watches", value : "watches"},
+    { id : 1, label : "Cơm Tấm", value : "Cơm Tấm"},
+    { id : 2, label : "Phở", value : "Phở"},
+    { id : 3, label : "Bún Bò", value : "Bún Bò"},
+    { id : 4, label : "Hủ Tiếu", value : "Hủ Tiếu"},
+    { id : 5, label : "Bánh Mì", value : "Bánh Mì"},
+    { id : 6, label : "Bánh Canh", value : "Bánh Canh"},
+    { id : 7, label : "Bánh Ướt", value : "Bánh Ướt"},
+    { id : 8, label : "Chè", value : "Chè"},
+    { id : 9, label : "Fast food", value : "Fast Food"},
+    { id : 10, label : "Bánh Xèo", value : "Bánh Xèo"},
+    { id : 11, label : "Xôi", value : "Xôi"},
+    { id : 12, label : "Bún Đậu", value : "Bún Đậu"},
 ]
 
 
