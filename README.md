@@ -1,70 +1,15 @@
-# Getting Started with Create React App
+Sơ đồ use case : usecase
+![image](https://github.com/Group-1-Webdev-NT208-O21-ANTT/OrderFood/assets/101809224/b92c60d4-d9f7-4856-bdec-a6482b8c2b06)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Đặc tả sơ đồ : • Trang chủ (Homepage):
 
-In the project directory, you can run:
+Gói Ý (Suggestion Box): Nơi người dùng có thể đưa ra ý kiến hoặc đề xuất. Phân Loại (Category): Chức năng giúp người dùng phân loại sản phẩm. Bộ Lọc (Filter): Cho phép người dùng lọc các sản phẩm theo tiêu chí cụ thể. Thanh Tìm Kiếm (Search Bar): Người dùng có thể nhập từ khóa để tìm kiếm sản phẩm. Chức năng Người dùng (User Functions):
 
-### `npm start`
+• Đăng Nhập (Login): Cho phép người dùng đăng nhập vào hệ thống. • Đăng Ký (Register): Tạo tài khoản thông thường. Đăng ký bằng tài khoản mạng xã hội. • Chức năng Admin (Administrator Functions):
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Quản Lý Đơn Hàng (Order Management): Quản lý các đơn hàng đã được đặt. Giao Tiếp với User (User Communication): Tương tác với người dùng qua hệ thống. Cập Nhật Menu (Update Menu): Thêm, bớt hoặc cập nhật các món ăn trong menu. Chức năng Mua Hàng (Shopping Functions):
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Và các page cần thiết khác :
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+• Menu: Hiển thị danh sách các món ăn để người dùng chọn lựa. • Chi Tiết Món Ăn (Dish Details): Hiển thị thông tin chi tiết về món ăn mà người dùng quan tâm. • Đặt Hàng (Place Order): Cho phép người dùng đặt hàng các món ăn họ chọn. • Thanh Toán (Checkout): Chức năng thanh toán và xác nhận đơn hàng. • Đánh Giá (Review): Người dùng có thể để lại đánh giá về món ăn sau khi sử dụng.
