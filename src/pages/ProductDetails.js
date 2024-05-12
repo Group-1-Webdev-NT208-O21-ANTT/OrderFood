@@ -8,6 +8,8 @@ import VerticalCardProduct from '../components/VerticalCardProduct';
 import CategroyWiseProductDisplay from '../components/CategoryWiseProductDisplay';
 import addToCart from '../helpers/addToCart';
 import Context from '../context';
+import LikeButtonComponent from '../components/LikeButtonComponent/LikeButtonComponent';
+import CommentComponent from '../components/CommentComponent/CommentComponent';
 
 const ProductDetails = () => {
   const [data,setData] = useState({
@@ -197,7 +199,9 @@ const ProductDetails = () => {
                     <FaStar/>
                     <FaStarHalf/>
                 </div>
-
+                <div className="like-button-container">
+      <LikeButtonComponent/>
+    </div>
                 <div className='flex items-center gap-2 text-2xl lg:text-3xl font-medium my-1'>
                   <p className='text-red-600'>{displayINRCurrency(data.sellingPrice)}</p>
                   <p className='text-slate-400 line-through'>{displayINRCurrency(data.price)}</p>
@@ -218,7 +222,9 @@ const ProductDetails = () => {
 
       </div>
 
-
+      <div className="cmt-container">
+      <CommentComponent/>
+    </div>
 
       {
         data.category && (
