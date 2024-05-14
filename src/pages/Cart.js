@@ -3,6 +3,7 @@ import SummaryApi from "../common";
 import Context from "../context";
 import displayVNDCurrency from "../helpers/displayCurrency";
 import { MdDelete } from "react-icons/md";
+import PayPalButton from "../components/PayPalButton"; 
 
 const Cart = () => {
   const [data, setData] = useState([]);
@@ -106,6 +107,22 @@ const Cart = () => {
     (preve, curr) => preve + curr.quantity * curr?.productId?.sellingPrice,
     0
   );
+
+  const handleSuccess = (details) => {
+    console.log("Payment successful!", details);
+    // Add additional success handling here
+  };
+
+  const handleError = (err) => {
+    console.error("Payment error!", err);
+    // Add additional error handling here
+  };
+
+  const handleCancel = () => {
+    console.log("Payment cancelled!");
+    // Add additional cancel handling here
+  };
+
   return (
     <div className="container mx-auto">
       <div className="text-center text-lg my-3">
@@ -205,9 +222,13 @@ const Cart = () => {
                 <p>{displayVNDCurrency(totalPrice)}</p>
               </div>
 
-              <button className="bg-blue-600 p-2 text-white w-full mt-2">
-                Payment
-              </button>
+              {/* Thêm thành phần PayPalButton */}
+              <PayPalButton 
+                amount={(totalPrice / 23000).toFixed(2)} 
+                onSuccess={handleSuccess} 
+                onCancel={handleCancel} 
+                onError={handleError} 
+              />
             </div>
           )}
         </div>
