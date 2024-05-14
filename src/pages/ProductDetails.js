@@ -219,12 +219,12 @@ const ProductDetails = () => {
               </div>
             )
            }
-
-      </div>
-
-      <div className="cmt-container">
+<div className="cmt-container">
       <CommentComponent/>
     </div>
+      </div>
+
+      
 
       {
         data.category && (
