@@ -2,7 +2,6 @@ import React from 'react'
 import CategoryList from '../components/CategoryList'
 import BannerProduct from '../components/BannerProduct'
 import HorizontalCardProduct from '../components/HorizontalCardProduct'
-import VerticalCardProduct from '../components/VerticalCardProduct'
 
 const Home = () => {
   return (
@@ -10,17 +9,15 @@ const Home = () => {
       <CategoryList/>
       <BannerProduct/>
 
-      <HorizontalCardProduct category={"Xôi"} heading={"Top's Airpodes"}/>
-      <HorizontalCardProduct category={"watches"} heading={"Popular's Watches"}/>
-
-      <VerticalCardProduct category={"mobiles"} heading={"Mobiles"}/>
-      <VerticalCardProduct category={"Mouse"} heading={"Mouse"}/>
-      <VerticalCardProduct category={"televisions"} heading={"Televisions"}/>
-      <VerticalCardProduct category={"camera"} heading={"Camera & Photography"}/>
-      <VerticalCardProduct category={"earphones"} heading={"Wired Earphones"}/>
-      <VerticalCardProduct category={"speakers"} heading={"Bluetooth Speakers"}/>
-      <VerticalCardProduct category={"refrigerator"} heading={"Refrigerator"}/>
-      <VerticalCardProduct category={"trimmers"} heading={"Trimmers"}/>
+      <HorizontalCardProduct category={"Chè"} heading={"Chè"}/>
+      <HorizontalCardProduct category={"watches"} heading={"Buốn bò"}/>
+      <HorizontalCardProduct category={"Phở"} heading={"Phở"}/>
+      <HorizontalCardProduct category={"Xôi"} heading={"Xôi"}/>
+      <HorizontalCardProduct category={"Fast Food"} heading={"Fastfood"}/>
+      <HorizontalCardProduct category={"Bánh Ướt"} heading={"Bánh ướt"}/>
+      <HorizontalCardProduct category={"Bánh Mì"} heading={"Bánh mì"}/>
+      <HorizontalCardProduct category={"Bánh Xèo"} heading={"Bánh Xèo"}/>
+      <HorizontalCardProduct category={"Hủ Tiếu"} heading={"Hủ tiếu"}/>
     </div>
   )
 }

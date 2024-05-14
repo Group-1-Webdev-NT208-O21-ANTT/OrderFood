@@ -1,12 +1,13 @@
-const displayINRCurrency = (num) => {
-    const formatter = new Intl.NumberFormat('en-IN',{
-        style : "currency",
-        currency : 'INR',
-        minimumFractionDigits : 2
-    })
 
-    return formatter.format(num)
 
-}
+const displayVNDCurrency = (num) => {
+    const formatter = new Intl.NumberFormat('vi-VN', {
+        style: 'currency',
+        currency: 'VND',
+        minimumFractionDigits: 0 // Số chữ số sau dấu phẩy
+    });
 
-export default displayINRCurrency
+    return formatter.format(num);
+};
+
+export default displayVNDCurrency;
