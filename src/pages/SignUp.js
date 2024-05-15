@@ -97,11 +97,11 @@ const SignUp = () => {
 
                     <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                       <div className='grid'>
-                              <label>Name : </label>
+                              <label> : </label>
                               <div className='bg-slate-100 p-2'>
                                   <input 
                                       type='text' 
-                                      placeholder='enter your name' 
+                                      placeholder='Nhập tên' 
                                       name='name'
                                       value={data.name}
                                       onChange={handleOnChange}
@@ -114,7 +114,7 @@ const SignUp = () => {
                             <div className='bg-slate-100 p-2'>
                                 <input 
                                     type='email' 
-                                    placeholder='enter email' 
+                                    placeholder='Nhập email' 
                                     name='email'
                                     value={data.email}
                                     onChange={handleOnChange}
@@ -124,11 +124,11 @@ const SignUp = () => {
                         </div>
 
                         <div>
-                            <label>Password : </label>
+                            <label>Mật khẩu : </label>
                             <div className='bg-slate-100 p-2 flex'>
                                 <input 
                                     type={showPassword ? "text" : "password"} 
-                                    placeholder='enter password'
+                                    placeholder='Nhập mật '
                                     value={data.password}
                                     name='password' 
                                     onChange={handleOnChange}
@@ -151,11 +151,11 @@ const SignUp = () => {
                         </div>
 
                         <div>
-                            <label>Confirm Password : </label>
+                            <label>Xác nhận mật khẩu: </label>
                             <div className='bg-slate-100 p-2 flex'>
                                 <input 
                                     type={showConfirmPassword ? "text" : "password"} 
-                                    placeholder='enter confirm password'
+                                    placeholder='Nhập lại mật khẩu'
                                     value={data.confirmPassword}
                                     name='confirmPassword' 
                                     onChange={handleOnChange}
@@ -178,11 +178,11 @@ const SignUp = () => {
                             </div>
                         </div>
 
-                        <button className='bg-red-600 hover:bg-red-700 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-6'>Sign Up</button>
+                        <button className='bg-red-600 hover:bg-red-700 text-white px-6 py-2 w-full max-w-[150px] rounded-full hover:scale-110 transition-all mx-auto block mt-6'>Đăng ký</button>
 
                     </form>
 
-                    <p className='my-5'>Already have account ? <Link to={"/login"} className=' text-red-600 hover:text-red-700 hover:underline'>Login</Link></p>
+                    <p className='my-5'>Nếu đã có tài khoản <Link to={"/login"} className=' text-red-600 hover:text-red-700 hover:underline'>Đăng nhập</Link></p>
             </div>
 
 
