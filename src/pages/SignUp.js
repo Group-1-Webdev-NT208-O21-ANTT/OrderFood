@@ -97,7 +97,7 @@ const SignUp = () => {
 
                     <form className='pt-6 flex flex-col gap-2' onSubmit={handleSubmit}>
                       <div className='grid'>
-                              <label> : </label>
+                              <label> Tên: </label>
                               <div className='bg-slate-100 p-2'>
                                   <input 
                                       type='text' 
@@ -128,7 +128,7 @@ const SignUp = () => {
                             <div className='bg-slate-100 p-2 flex'>
                                 <input 
                                     type={showPassword ? "text" : "password"} 
-                                    placeholder='Nhập mật '
+                                    placeholder='Nhập mật khẩu'
                                     value={data.password}
                                     name='password' 
                                     onChange={handleOnChange}
