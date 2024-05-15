@@ -16,7 +16,7 @@ const SearchProduct = () => {
         const dataResponse = await response.json()
         setLoading(false)
 
-        setData(dataResponse.data)
+        setData(dataResponse.data || [])
     }
 
     useEffect(()=>{
@@ -30,8 +30,8 @@ const SearchProduct = () => {
           <p className='text-lg text-center'>Loading ...</p>
         )
       }
- 
-      <p className='text-lg font-semibold my-3'>Search Results : {data.length}</p>
+
+      <p className='text-lg font-semibold my-3'>Search Results : {data?.length}</p>
 
       {
         data.length === 0 && !loading && (
