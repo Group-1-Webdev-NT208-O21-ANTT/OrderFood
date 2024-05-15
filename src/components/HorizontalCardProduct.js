@@ -108,7 +108,7 @@ const HorizontalCardProduct = ({ category, heading }) => {
                       style={{ width: "145px" }}
                       onClick={(e) => handleAddToCart(e, product?._id)}
                     >
-                      Add to Cart
+                      Thêm vào giỏ
                     </button>
                   </div>
                 </Link>
