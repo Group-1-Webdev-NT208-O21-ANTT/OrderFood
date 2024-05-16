@@ -70,7 +70,7 @@ const Login = () => {
                         <div className='grid'>
                             <label>Email : </label>
                             <div className='bg-slate-100 p-2'>
-                                <input 
+                                <input
                                     type='email' 
                                     placeholder='enter email' 
                                     name='email'
