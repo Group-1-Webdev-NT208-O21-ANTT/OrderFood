@@ -2,10 +2,10 @@ Sơ đồ use case : usecase
 ![image](https://github.com/Group-1-Webdev-NT208-O21-ANTT/OrderFood/assets/101809224/b92c60d4-d9f7-4856-bdec-a6482b8c2b06)
 
 - Thành viên nhóm 1:
-Đinh Quảng Đại – 20520886
-Võ Sỹ Minh – 21521146
-Hứa Hồ Gia Huy – 2152143
-Dương Văn Thắng – 22521327
+Đinh Quảng Đại – 20520886|
+Võ Sỹ Minh – 21521146|
+Hứa Hồ Gia Huy – 2152143|
+Dương Văn Thắng – 22521327|
 Hồ Diệp Huy – 22520541
 
 
